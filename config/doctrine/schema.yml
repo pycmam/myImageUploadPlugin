@@ -16,29 +16,18 @@ Image:
       filter: false
       form:   false
 
-ImagePoint:
-  tableName: app_images_point
+ImageAdvert:
+  tableName: app_images_advert
   inheritance:
     extends: Image
     type: concrete
   columns:
-    point_id:  { type: integer, notnull: true }
+    advert_id:  { type: integer, notnull: true }
   relations:
-    Point:
-      local: point_id
+    Advert:
+      local: advert_id
       foreign: id
-      foreignType: many
-      foreignAlias: Images
-      onDelete: CASCADE
-    Place:
-      local: point_id
-      foreign: id
-      foreignType: many
-      foreignAlias: Images
-      onDelete: CASCADE
-    Event:
-      local: point_id
-      foreign: id
+      type: one
       foreignType: many
       foreignAlias: Images
       onDelete: CASCADE
