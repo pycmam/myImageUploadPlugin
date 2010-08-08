@@ -1,0 +1,17 @@
+detect_relations: true
+options:
+  type: INNODB
+  charset: utf8
+
+Image:
+  tableName:   false
+  actAs:
+    SkipColumns: { skip: [bin] }
+  columns:
+    size:      { type: integer(8),  notnull: true }
+    type:      { type: string(16),  notnull: true }
+    bin:       { type: blob,        notnull: true }
+  options:
+    symfony:
+      filter: false
+      form:   false

@@ -1,0 +1,8 @@
+all:
+  thumbnail:
+    dir: /uploads/thumbnails
+    types:
+      uploaded_thumbnail:
+        mimetype: image/jpeg
+        macro:
+          Replica_Macro_ThumbnailFixed: [150, 150, center, center]

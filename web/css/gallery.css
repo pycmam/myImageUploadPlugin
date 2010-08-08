@@ -1,0 +1,60 @@
+#upload_progress {
+    display: none;
+}
+
+#image_list {
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#image_list li {
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#image_list li a.primary {
+    background: url('/sf/sf_admin/images/ok.png') left center no-repeat;
+    padding-left: 20px;
+}
+
+#image_list li.primary {
+    border-color: #ff0000;
+    backgroud: #FFDFDF
+}
+
+#image_list li.primary a.primary {
+    display: none;
+}
+
+#image_list a.delete {
+    background: url('/sfDoctrinePlugin/images/delete.png') no-repeat scroll 0 0 transparent;
+    padding-left: 20px;
+}
+
+#image_list li img {
+    margin-bottom: 3px;
+}
+
+#image_upload_form {
+    margin-top: 15px;
+}
+
+#upload_progress {
+    margin: 10px 0 0 0;
+}
+
+#error_list {
+    list-style: none;
+    margin: 10px 0 0 0;
+    color: #ff0000;
+}
+
+.swfupload {
+    margin: 15px 0 5px 0;
+}
