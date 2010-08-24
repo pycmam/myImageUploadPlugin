@@ -12,15 +12,40 @@
 #image_list li {
     float: left;
     margin: 0 10px 10px 0;
-    padding: 5px;
+    padding: 2px;
     overflow: hidden;
-    border: 1px solid #ccc;
-    text-align: center;
+    border: 1px solid #ddd;
+    position: relative;
+    width: 96px;
+    height: 96px;
+}
+
+#image_list li .image-controls {
+    display: none;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    width: 100px;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+#image_list li:hover .image-controls {
+    display: block;
+}
+
+#image_list li .image-controls a {
+    display: block;
+    margin: 3px 0 3px 6px;
+    height: 12px;
+    padding-top: 2px;
 }
 
 #image_list li a.primary {
-    background: url('/sf/sf_admin/images/ok.png') left center no-repeat;
-    padding-left: 20px;
+    background: url('/myImageUploadPlugin/images/primary.png') left center no-repeat;
+    padding-left: 16px;
 }
 
 #image_list li.primary {
@@ -32,9 +57,13 @@
     display: none;
 }
 
+#image_list li.primary .image-controls {
+    height: 22px;
+}
+
 #image_list a.delete {
-    background: url('/sfDoctrinePlugin/images/delete.png') no-repeat scroll 0 0 transparent;
-    padding-left: 20px;
+    background: url('/myImageUploadPlugin/images/delete.png') no-repeat scroll 0 0 transparent;
+    padding-left: 16px;
 }
 
 #image_list li img {
@@ -57,4 +86,13 @@
 
 .swfupload {
     margin: 15px 0 5px 0;
+}
+
+#upload-button-container {
+    margin-bottom: 10px;
+}
+
+#upload-button-container p {
+    margin-left: 130px;
+    margin-top: -25px;
 }

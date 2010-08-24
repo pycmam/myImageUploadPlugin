@@ -5,4 +5,4 @@ all:
       uploaded_thumbnail:
         mimetype: image/jpeg
         macro:
-          Replica_Macro_ThumbnailFixed: [150, 150, center, center]
+          Replica_Macro_ThumbnailFixed: [96, 96, center, center]

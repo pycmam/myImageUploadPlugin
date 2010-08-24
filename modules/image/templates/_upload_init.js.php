@@ -7,7 +7,6 @@
  */
 ?>
 <script type="text/javascript">
-//<[CDATA[
 var upload = new function() {
 
   function _construct() {
@@ -162,5 +161,4 @@ var upload = new function() {
 $(function(){
   upload.init();
 });
-//]]>
 </script>
