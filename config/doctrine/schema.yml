@@ -16,28 +16,16 @@ Image:
       filter: false
       form:   false
 
-ImagePoint:
-  tableName: app_images_point
+ImageReply:
+  tableName: app_images_reply
   inheritance:
     extends: Image
     type: concrete
   columns:
-    point_id:  { type: integer, notnull: true }
+    reply_id:  { type: integer, notnull: true }
   relations:
-    Point:
-      local: point_id
-      foreign: id
-      foreignType: many
-      foreignAlias: Images
-      onDelete: CASCADE
-    Place:
-      local: point_id
-      foreign: id
-      foreignType: many
-      foreignAlias: Images
-      onDelete: CASCADE
-    Event:
-      local: point_id
+    TenderReply:
+      local: reply_id
       foreign: id
       foreignType: many
       foreignAlias: Images
