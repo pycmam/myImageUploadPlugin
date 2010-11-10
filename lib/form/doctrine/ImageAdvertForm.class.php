@@ -1,12 +1,12 @@
 <?php
 
-class ImageRealtyForm extends ImageForm
+class ImageAdvertForm extends ImageForm
 {
     /**
      * Model name
      */
     public function getModelName()
     {
-        return 'ImageRealty';
+        return 'ImageAdvert';
     }
 }
