@@ -17,7 +17,7 @@ Image:
       form:   false
 
 ImageRealty:
-  tableName: app_images_realty
+  tableName: rlt_images_realty
   inheritance:
     extends: Image
     type: concrete
