@@ -17,7 +17,7 @@ Image:
       form:   false
 
 ImageAdvert:
-  tableName: app_images_advert
+  tableName: board_images_advert
   inheritance:
     extends: Image
     type: concrete
