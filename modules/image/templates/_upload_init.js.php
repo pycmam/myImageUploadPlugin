@@ -7,6 +7,7 @@
  */
 ?>
 <script type="text/javascript">
+//<[CDATA[
 var upload = new function() {
 
   function _construct() {
@@ -117,12 +118,12 @@ var upload = new function() {
       var settings = {
         flash_url : "/myImageUploadPlugin/swfupload.swf",
             upload_url: "<?php echo url_for($routePrefix . '_image_upload', $object) ?>?<?php echo ini_get('session.name') ?>=<?php echo session_id() ?>",
-            file_post_name: "<?php echo $form->getName() ?>[bin]",
+            file_post_name: "<?php echo $form->getName() ?>[path]",
             post_params: {
               '<?php echo $form->getName() ?>[_csrf_token]': "<?php echo $form->getCSRFToken(); ?>"
             },
 
-            file_size_limit : "<?php echo $form->getValidator('bin')->getOption('max_size') / 1024 / 1024 ?> MB",
+            file_size_limit : "<?php echo $form->getValidator('path')->getOption('max_size') / 1024 / 1024 ?> MB",
             file_types : "*.jpg;*.jpeg;*.png;*.gif",
             file_types_description : "Файлы изображений",
             file_upload_limit : <?php echo sfConfig::get('app_image_upload_limit', 15) ?>,
@@ -161,4 +162,5 @@ var upload = new function() {
 $(function(){
   upload.init();
 });
+//]]>
 </script>

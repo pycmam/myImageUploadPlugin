@@ -5,12 +5,13 @@ options:
 
 Image:
   tableName:   false
-  actAs:
-    SkipColumns: { skip: [bin] }
+#  actAs:
+#    SkipColumns: { skip: [bin] }
   columns:
     size:      { type: integer(8),  notnull: true }
     type:      { type: string(16),  notnull: true }
-    bin:       { type: blob,        notnull: true }
+#    bin:       { type: blob,        notnull: true }
+    path:      { type: string }
   options:
     symfony:
       filter: false

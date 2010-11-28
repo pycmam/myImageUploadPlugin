@@ -12,12 +12,12 @@ abstract class ImageForm extends BaseFormDoctrine
     {
         parent::setup();
 
-        $this->setWidget('bin', new sfWidgetFormInputFile);
-        $this->setValidator('bin', new sfValidatorFile(array(
-            'max_size'   => 2097152, // 2Mb
+        $this->setWidget('path', new sfWidgetFormInputFile);
+        $this->setValidator('path', new sfValidatorFile(array(
+            'max_size'   => 4194304, // 4Mb
             'mime_types' => 'web_images',
         )));
-        $this->widgetSchema->setHelp('bin',
+        $this->widgetSchema->setHelp('path',
             'Вы можете загрузить одно или несколько изображений. Только JPG, PNG и GIF файлы до 2Mb.');
 
         $this->widgetSchema->setNameFormat('image[%s]');
@@ -45,7 +45,7 @@ abstract class ImageForm extends BaseFormDoctrine
         $image->setType($file->getType());
         $image->setSize($file->getSize());
 
-        return file_get_contents($file->getTempName());
+        return Image::saveUploadedFile($file, $this->getModelName());
     }
 
 }

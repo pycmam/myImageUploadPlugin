@@ -1,4 +1,6 @@
 all:
+  images:
+    dir:  /uploads/images
   thumbnail:
     dir: /uploads/thumbnails
     types:
